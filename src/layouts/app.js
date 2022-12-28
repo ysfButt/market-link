@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '@mui/material';
 
 // Components
 // import MainHeader from '../components/MainHeader';
@@ -18,6 +19,7 @@ const AppLayout = props => {
         <a href="/">
           <MainLogo />
         </a>
+        <Button variant="contained">Go Back</Button>
       </aside>
 
       {/* Main Content */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 const NotFound = ({ history }) => {
   return (
@@ -10,7 +11,7 @@ const NotFound = ({ history }) => {
           <img src={`${process.env.REACT_APP_CDN_URL}/assets/404-page_ziaq0x.png`} alt="" />
         </figure>
         <p>You may have mistyped the address or the page may have moved.</p>
-        {/* <Button type="primary" onClick={() => history.push('/')}>Go Back</Button> */}
+        <Button variant="contained" onClick={() => history.push('/')}>Go Back</Button>
       </div>
     </div>
   )
