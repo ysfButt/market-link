@@ -4,8 +4,12 @@
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   background-color: @white !important;
   overflow-x: hidden !important;
+  font-family: @font-family !important;
+  line-height: @line-height-base;
 
   .add-btn {
     margin-top: 10px;
@@ -127,21 +131,18 @@ h5,
 h6 {
   font-weight: @typography-title-font-weight !important;
 }
+p {
+  margin: 0 0 @margin-xs + 2;
+}
+
+a {
+  text-decoration: none;
+  transition: all ease-in-out .4s;
+}
 
 * {
   box-sizing: border-box;
-}
-
-.side-drawer {
-  background: #fff !important;
-}
-
-.ant-menu {
-  &.ant-menu-dark {
-    .ant-menu-sub {
-      background: #060818 !important;
-    }
-  }
+  font-family: @font-family !important;
 }
 
 .container {
@@ -168,18 +169,7 @@ h6 {
   }
 }
 
-.layout,
-.ant-popover,
-.ant-modal,
-.ant-drawer,
-.ant-tooltip {
-  .ant-menu {
-    text-align: left !important;
-
-    .ant-menu-item {
-      border-bottom: 0;
-    }
-  }
+.layout {
   // Helper Clasess
 
   // Animation //
@@ -627,6 +617,7 @@ h6 {
 .layout {
   background: @white !important;
   overflow-x: hidden !important;
+  display: flex;
 }
 
 .table-h {
@@ -637,4 +628,109 @@ h6 {
   }
 }
 
+// Main Content
+.main-content {
+  width: calc(100% - 111px);
+  margin-left: auto;
+  padding: @padding-lg @padding-lg + 24 @padding-lg + 24;
+}
+
+/** Main Aside **/
+.layout-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  flex: 0 0 111px;
+  max-width: 111px;
+  min-width: 111px;
+  width: 111px;
+  background: @primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  .logo {
+    svg {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+    }
+  }
+  a {
+    width: 100%;
+    color: @white;
+    fill: @white;
+    padding: @padding-lg;
+    display: block;
+    text-align: center;
+    font-size: @font-size-sm;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    svg {
+      display: block;
+      width: 28px;
+      height: 28px;
+      margin: 0 auto @margin-xs + 2;
+    }
+  }
+}
+/** Main Aside End **/
+
+/**** Global Styling ****/
+.MuiTabs-root {
+  .MuiTabs-flexContainer {
+    gap: 24px;
+    border-bottom: @border-width-base @border-style-base @border-color-base;
+  }
+  .MuiButtonBase-root {
+    padding: @padding-lg 0;
+    font-size: @font-size-lg;
+    line-height: @line-height-base + 9;
+    font-weight: 700;
+    max-width: inherit;
+    min-width: inherit;
+  }
+}
+/**** Global Styling End ****/
+
 /**** App Styling ****/
+
+/** Sub Header **/
+.subheder {
+  display: flex;
+  gap: 48px;
+  margin-bottom: @margin-lg + 10;
+  .node-caption {
+    display: flex;
+    gap: 24px;
+    .MuiAvatar-root {
+      width: 60px;
+      height: 60px;
+    }
+    .caption {
+      min-width: 200px;
+    }
+  }
+  .caption {
+    p {
+      color: @normal-color;
+      font-size: @font-size-base;
+    }
+    .title {
+      font-size: @font-size-lg + 20;
+      line-height: @line-height-base + 9;
+    }
+  }
+  .node-details {
+    display: flex;
+    gap: 48px;
+    .caption {
+      .title {
+        font-size: @font-size-lg + 4;
+      }
+    }
+  }
+}
+/** Sub Header Emd **/
