@@ -884,6 +884,52 @@ a {
   margin-left: auto;
   padding: 24px 48px 48px;
 }
+/** Main Footer **/
+.footer {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #E3E8F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #00000099;
+}
+.footer p {
+  margin: 0;
+}
+.footer .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16 px;
+  font-size: 16px;
+}
+.footer .footer-links a {
+  color: #00000099;
+}
+.footer .footer-links a:hover {
+  color: #343AC8;
+  text-decoration: underline;
+}
+.footer .footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer .footer-social-links a {
+  fill: #00000099;
+  color: #00000099;
+}
+.footer .footer-social-links a:hover {
+  fill: #343AC8;
+  color: #343AC8;
+  text-decoration: underline;
+}
+.footer .footer-social-links svg {
+  width: 20px;
+  height: 20px;
+}
+/** Main Footer End **/
 /** Main Aside **/
 .layout-aside {
   position: fixed;
@@ -931,11 +977,40 @@ a {
 }
 .MuiTabs-root .MuiButtonBase-root {
   padding: 24px 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
   font-weight: 700;
   max-width: inherit;
   min-width: inherit;
+  color: #0f172acc;
+}
+.MuiTabs-root .MuiButtonBase-root.Mui-selected {
+  color: #343AC8;
+}
+.MuiTabs-root .MuiTabs-indicator {
+  background: #343AC8;
+}
+.heading {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-top: 12px;
+}
+.card {
+  border: 1px solid #E3E8F1;
+  border-radius: 12px;
+  padding: 16px;
+}
+.card .card-head {
+  margin-bottom: 16px;
+}
+.card .card-head .title {
+  color: #0f172acc;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.card .card-head .subtitle {
+  display: block;
+  font-size: 20px;
 }
 /**** Global Styling End ****/
 /**** App Styling ****/
@@ -972,4 +1047,115 @@ a {
   font-size: 20px;
 }
 /** Sub Header Emd **/
+/** Matrics Tab **/
+.metrics-tab .filter-by-wrap {
+  border: 1px solid #E3E8F1;
+  background: rgba(235, 236, 255, 0.2);
+  border-radius: 12px;
+  padding: 26px 24px;
+  margin-top: 24px;
+}
+.metrics-tab .filter-by-wrap p {
+  font-size: 13.5px;
+  color: #0f172acc;
+  margin-bottom: 16px;
+}
+.metrics-tab .filter-by-wrap .filter-by-btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.metrics-tab .filter-by-wrap .filter-by-btns .MuiButtonBase-root {
+  padding: 0 13px;
+  height: 30px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  font-size: 16px;
+  background: rgba(235, 236, 255, 0.5);
+  color: #0f172acc;
+  box-shadow: none;
+  letter-spacing: 0.1px;
+}
+.metrics-tab .filter-by-wrap .filter-by-btns .MuiButtonBase-root:hover {
+  background: rgba(211, 213, 250, 0.5);
+}
+.metrics-tab .filter-by-wrap .filter-by-btns .MuiButtonBase-root:focus {
+  border-color: #343AC8;
+}
+.metrics-tab .filter-by-wrap .filter-by-btns .MuiButtonBase-root.active {
+  background: #343AC8;
+  color: #fff;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root {
+  padding: 8px 16px;
+  height: 41px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 16px;
+  background: #fff;
+  color: #0f172acc;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  justify-content: space-between;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root p {
+  margin: 0;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root .node-detail {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root .node-add {
+  color: #343AC8;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root img {
+  width: 25px;
+}
+.metrics-tab .filter-by-wrap .node-btn.MuiButtonBase-root:hover {
+  background-color: rgba(211, 213, 250, 0.5);
+  border-color: #171c8e;
+}
+.metrics-tab .radio-btn-wrap {
+  width: 196px;
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(52, 58, 200, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.metrics-tab .radio-btn-wrap .MuiButtonBase-root {
+  width: 100%;
+  min-width: 30px;
+  padding: 0 8px;
+  height: 26px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  background: transparent;
+  box-shadow: none;
+  color: #343AC8;
+  letter-spacing: 0.1px;
+}
+.metrics-tab .radio-btn-wrap .MuiButtonBase-root:focus {
+  border-color: #343AC8;
+}
+.metrics-tab .radio-btn-wrap .MuiButtonBase-root.active {
+  background: #343AC8;
+  color: #fff;
+}
+.metrics-tab .multi-actions-wrap {
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.metrics-tab .cards-wrap {
+  margin: 24px 0;
+}
+/** Matrics Tab End **/
 /*# sourceMappingURL=index.css.map */

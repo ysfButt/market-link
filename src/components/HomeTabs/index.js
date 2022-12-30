@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // Components
-import MetricsTab from './MetricsTab';
+import MetricsTab from 'components/MetricsTab';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

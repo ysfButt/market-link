@@ -10,6 +10,8 @@ body {
   overflow-x: hidden !important;
   font-family: @font-family !important;
   line-height: @line-height-base;
+  // letter-spacing: .1px;
+  // color: @normal-color;
 
   .add-btn {
     margin-top: 10px;
@@ -635,6 +637,53 @@ a {
   padding: @padding-lg @padding-lg + 24 @padding-lg + 24;
 }
 
+/** Main Footer **/
+.footer {
+  margin-top: @margin-lg + 26;
+  padding-top: @padding-lg + 6;
+  border-top: @border-width-base @border-style-base @border-color-base;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #00000099;
+  p {
+    margin: 0;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 16 px;
+    font-size: @font-size-lg;
+    a {
+      color: #00000099;
+      &:hover {
+        color: @primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a {
+      fill: #00000099;
+      color: #00000099;
+      &:hover {
+        fill: @primary-color;
+        color: @primary-color;
+        text-decoration: underline;
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+/** Main Footer End **/
+
 /** Main Aside **/
 .layout-aside {
   position: fixed;
@@ -686,11 +735,40 @@ a {
   }
   .MuiButtonBase-root {
     padding: @padding-lg 0;
-    font-size: @font-size-lg;
+    font-size: @font-size-lg - 1;
     line-height: @line-height-base + 9;
     font-weight: 700;
     max-width: inherit;
     min-width: inherit;
+    color: @normal-color;
+    &.Mui-selected {
+      color: @primary-color;
+    }
+  }
+  .MuiTabs-indicator {
+    background: @primary-color;
+  }
+}
+.heading {
+  font-size: @font-size-lg + 4;
+  margin-top: @margin-lg;
+  margin-top: @margin-sm;
+}
+.card {
+  border: @border-width-base @border-style-base @border-color-base;
+  border-radius: @border-radius-base + 8;
+  padding: @padding-md;
+  .card-head {
+    margin-bottom: @margin-md;
+    .title {
+      color: @normal-color;
+      margin-bottom: 0;
+      font-size: @font-size-base - 1;
+    }
+    .subtitle {
+      display: block;
+      font-size: @font-size-lg + 4;
+    }
   }
 }
 /**** Global Styling End ****/
@@ -734,3 +812,119 @@ a {
   }
 }
 /** Sub Header Emd **/
+
+/** Matrics Tab **/
+.metrics-tab {
+  .filter-by-wrap {
+    border: @border-width-base @border-style-base @border-color-base;
+    background: rgba(235, 236, 255, 0.2);
+    border-radius: @border-radius-base + 8;
+    padding: @padding-lg + 2 @padding-lg;
+    margin-top: @margin-lg;
+    p {
+      font-size: @font-size-base - .5;
+      color: @normal-color;
+      margin-bottom: @margin-md;
+    }
+    .filter-by-btns {
+      display: flex;
+      gap: 10px;
+      margin-bottom: @margin-lg;
+      .MuiButtonBase-root {
+        padding: 0 @padding-sm + 1;
+        height: 30px;
+        border-radius: @border-radius-base + 26;
+        text-transform: capitalize;
+        font-size: @font-size-lg;
+        background: rgba(235, 236, 255, 0.5);
+        color: @normal-color;
+        box-shadow: none;
+        letter-spacing: .1px;
+        &:hover {
+          background: rgba(211, 213, 250, 0.5);
+        }
+        &:focus {
+          border-color: @primary-color;
+        }
+        &.active {
+          background: @primary-color;
+          color: @white;
+        }
+      }
+    }
+    .node-btn {
+      &.MuiButtonBase-root {
+        padding: @padding-xs @padding-md;
+        height: 41px;
+        border-radius: @border-radius-base + 4;
+        text-transform: capitalize;
+        font-size: @font-size-lg;
+        background: @white;
+        color: @normal-color;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.06);
+        width: 100%;
+        justify-content: space-between;
+        p {
+          margin: 0;
+        }
+        .node-detail {
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .node-add {
+          color: @primary-color;
+          width: 100%;
+          text-align: center;
+          font-size: @font-size-lg;
+        }
+        img {
+          width: 25px;
+        }
+        &:hover {
+          background-color: rgba(211, 213, 250, 0.5);
+          border-color: rgb(23, 28, 142);
+        }
+      }
+    }
+  }
+  .radio-btn-wrap {
+    width: 196px;
+    padding: @padding-xs - 2;
+    border-radius: @border-radius-base + 26;
+    background: rgba(52, 58, 200, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .MuiButtonBase-root {
+      width: 100%;
+      min-width: 30px;
+      padding: 0 @padding-xs;
+      height: 26px;
+      border-radius: @border-radius-base + 26;
+      text-transform: capitalize;
+      background: transparent;
+      box-shadow: none;
+      color: @primary-color;
+      letter-spacing: .1px;
+      &:focus {
+        border-color: @primary-color;
+      }
+      &.active {
+        background: @primary-color;
+        color: @white;
+      }
+    }
+  }
+  .multi-actions-wrap {
+    margin: @margin-lg 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cards-wrap {
+    margin: @margin-lg 0;
+  }
+}
+/** Matrics Tab End **/
