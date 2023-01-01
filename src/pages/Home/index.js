@@ -4,7 +4,7 @@ import { Avatar } from '@mui/material';
 // Componets
 import HomeTabs from 'components/HomeTabs';
 
-const Home = (props) => {
+const Home = ({ theme }) => {
 
   return (
     <div className="home-page">
@@ -32,7 +32,7 @@ const Home = (props) => {
         </div>
       </div>
       <div>
-        <HomeTabs />
+        <HomeTabs theme={theme} />
       </div>
     </div>
   )

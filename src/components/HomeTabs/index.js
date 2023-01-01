@@ -41,7 +41,7 @@ function a11yProps(index) {
   };
 }
 
-const HomeTabs = () => {
+const HomeTabs = ({ theme }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -56,7 +56,7 @@ const HomeTabs = () => {
         <Tab label="FEEDS" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <MetricsTab />
+        <MetricsTab theme={theme} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         NODES

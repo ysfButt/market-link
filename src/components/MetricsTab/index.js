@@ -4,8 +4,9 @@ import Button from '@mui/material/Button';
 // Compoenets
 import FiltersNode from './FiltersNode';
 import ChartCards from './ChartCards';
+import CustomRangePicker from './CustomRangePicker';
 
-const MetricsTab = () => {
+const MetricsTab = ({ theme }) => {
 
   return (
     <div className="metrics-tab">
@@ -27,6 +28,7 @@ const MetricsTab = () => {
           <Button variant="contained" className="active">7D</Button>
           <Button variant="contained">1M</Button>
         </div>
+        <CustomRangePicker theme={theme} />
       </div>
       <h3 className="heading">Feed Metrics</h3>
       <ChartCards />

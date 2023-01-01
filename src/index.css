@@ -1012,6 +1012,22 @@ a {
   display: block;
   font-size: 20px;
 }
+.MuiDateRangePickerInput-root {
+  width: 301px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: rgba(52, 58, 200, 0.1);
+}
+.MuiDateRangePickerInput-root .MuiInputBase-root .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+.MuiDateRangePickerInput-root .MuiInputBase-input {
+  text-align: center;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  color: #343AC8;
+}
 /**** Global Styling End ****/
 /**** App Styling ****/
 /** Sub Header **/
