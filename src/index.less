@@ -789,6 +789,16 @@ a {
     color: @primary-color;
   }
 }
+
+// Loader
+.app-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  max-height: 100vh;
+  overflow: hidden;
+}
 /**** Global Styling End ****/
 
 /**** App Styling ****/
@@ -868,6 +878,15 @@ a {
           background: @primary-color;
           color: @white;
         }
+      }
+    }
+    .nodes-wrap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 94px;
+      .app-loader {
+        min-height: 100%;
       }
     }
     .node-btn {

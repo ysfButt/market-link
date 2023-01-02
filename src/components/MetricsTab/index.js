@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 
 // Compoenets
@@ -8,19 +8,31 @@ import CustomRangePicker from './CustomRangePicker';
 
 const MetricsTab = ({ theme }) => {
 
+  // States
+  const [loading, setLoading] = useState(false);
+
+  // useEffect(() => {
+  //   if(loading) {
+  //     setTimeout(() => {
+        
+  //     }, timeout);
+  //     setLoading(false);
+  //   }
+  // },loading);
+
   return (
     <div className="metrics-tab">
       <div className="filter-by-wrap">
         <p>Filter nodes by</p>
         <div className="filter-by-btns">
-          <Button variant="contained" className="active">Link Rewards</Button>
-          <Button variant="contained">Feeds Supported</Button>
-          <Button variant="contained">Updates</Button>
-          <Button variant="contained">All Mainnets</Button>
-          <Button variant="contained">User Selected</Button>
+          <Button variant="contained" className="active" onClick={() => setLoading(!loading)}>Link Rewards</Button>
+          <Button variant="contained" onClick={() => setLoading(!loading)}>Feeds Supported</Button>
+          <Button variant="contained" onClick={() => setLoading(!loading)}>Updates</Button>
+          <Button variant="contained" onClick={() => setLoading(!loading)}>All Mainnets</Button>
+          <Button variant="contained" onClick={() => setLoading(!loading)}>User Selected</Button>
         </div>
         <p>Selected 5 nodes</p>
-        <FiltersNode />
+        <FiltersNode loading={loading} />
       </div>
       <div className="multi-actions-wrap">
         <div className="radio-btn-wrap">

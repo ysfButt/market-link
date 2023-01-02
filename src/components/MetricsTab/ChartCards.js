@@ -17,7 +17,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 1400,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -29,7 +29,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 5400,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -41,7 +41,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 5200,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -53,7 +53,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 6500,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -67,7 +67,7 @@ const ChartCards = () => {
                 strokeHeight: 13,
                 strokeWidth: 0,
                 strokeLineCap: 'round',
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -79,7 +79,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 7500,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -91,7 +91,7 @@ const ChartCards = () => {
                 name: 'Expected',
                 value: 8700,
                 strokeHeight: 5,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -104,7 +104,7 @@ const ChartCards = () => {
                 value: 7300,
                 strokeHeight: 2,
                 strokeDashArray: 2,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           }
@@ -127,7 +127,7 @@ const ChartCards = () => {
           columnWidth: '60%'
         }
       },
-      colors: ['#00E396'],
+      colors: ['#343AC8'],
       dataLabels: {
         enabled: false
       },
@@ -136,7 +136,7 @@ const ChartCards = () => {
         showForSingleSeries: true,
         customLegendItems: ['Actual', 'Expected'],
         markers: {
-          fillColors: ['#00E396', '#775DD0']
+          fillColors: ['#343AC8', '#A3A6ED']
         }
       }
     },
@@ -144,7 +144,7 @@ const ChartCards = () => {
 
   var lineChart = {
     series: [{
-      name: "Desktops",
+      name: "Optimism Mainnet",
       data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
     }],
     options: {
@@ -161,12 +161,9 @@ const ChartCards = () => {
       dataLabels: {
         enabled: false
       },
+      colors: ['#343AC8'],
       stroke: {
         curve: 'straight'
-      },
-      title: {
-        text: 'Product Trends by Month',
-        align: 'left'
       },
       grid: {
         row: {
@@ -183,7 +180,7 @@ const ChartCards = () => {
   var rangeAreaChart = {
     series: [
       {
-        name: 'New York Temperature',
+        name: 'Binance Mainnet',
         data: [
           {
             x: 'Jan',
@@ -247,6 +244,7 @@ const ChartCards = () => {
       stroke: {
         curve: 'straight'
       },
+      colors:['#343AC8'],
       markers: {
         hover: {
           sizeOffset: 5
@@ -255,37 +253,15 @@ const ChartCards = () => {
       dataLabels: {
         enabled: false
       },
-      yaxis: {
-        labels: {
-          formatter: (val) => {
-            return val + '°C'
-          }
-        }
-      }
     },
   };
 
   var barChart1 = {
     series: [{
-      name: 'Servings',
+      name: 'Data',
       data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
     }],
     options: {
-      annotations: {
-        points: [{
-          x: 'Bananas',
-          seriesIndex: 0,
-          label: {
-            borderColor: '#775DD0',
-            offsetY: 0,
-            style: {
-              color: '#fff',
-              background: '#775DD0',
-            },
-            text: 'Bananas are good',
-          }
-        }]
-      },
       chart: {
         height: 290,
         type: 'bar',
@@ -293,6 +269,7 @@ const ChartCards = () => {
           show: false
         },
       },
+      colors:['#343AC8'],
       plotOptions: {
         bar: {
           borderRadius: 10,
@@ -315,15 +292,11 @@ const ChartCards = () => {
         labels: {
           rotate: -45
         },
-        categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
-          'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
-        ],
+        categories: ['Polygon Mainnet (1)', 'Binance Mainnet (2)', 'Optimism Mainnet', 'Avalanche Mainnet (1)', 'Ethereum Mainnet (1)',
+        'Polygon Mainnet (1)', 'Binance Mainnet (2)', 'Optimism Mainnet', 'Avalanche Mainnet (1)', 'Ethereum Mainnet (1)',
+        'Polygon Mainnet (1)', 'Binance Mainnet (2)',
+       ],
         tickPlacement: 'on'
-      },
-      yaxis: {
-        title: {
-          text: 'Servings',
-        },
       },
       fill: {
         type: 'gradient',
@@ -343,7 +316,7 @@ const ChartCards = () => {
 
   var areaChart = {
     series: [{
-      name: 'series',
+      name: 'Data',
       data: [31, 40, 28, 51, 42, 109, 100]
     }],
     options: {
@@ -354,6 +327,7 @@ const ChartCards = () => {
           show: false
         },
       },
+      colors:['#343AC8'],
       dataLabels: {
         enabled: false
       },
@@ -386,7 +360,7 @@ const ChartCards = () => {
                 value: 14,
                 strokeWidth: 2,
                 strokeDashArray: 2,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -399,7 +373,7 @@ const ChartCards = () => {
                 value: 54,
                 strokeWidth: 5,
                 strokeHeight: 10,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -413,7 +387,7 @@ const ChartCards = () => {
                 strokeWidth: 10,
                 strokeHeight: 0,
                 strokeLineCap: 'round',
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -427,7 +401,7 @@ const ChartCards = () => {
                 strokeWidth: 10,
                 strokeHeight: 0,
                 strokeLineCap: 'round',
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -441,7 +415,7 @@ const ChartCards = () => {
                 strokeWidth: 10,
                 strokeHeight: 0,
                 strokeLineCap: 'round',
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           },
@@ -454,7 +428,7 @@ const ChartCards = () => {
                 value: 70,
                 strokeWidth: 5,
                 strokeHeight: 10,
-                strokeColor: '#775DD0'
+                strokeColor: '#A3A6ED'
               }
             ]
           }
@@ -474,7 +448,7 @@ const ChartCards = () => {
           horizontal: true,
         }
       },
-      colors: ['#00E396'],
+      colors: ['#343AC8'],
       dataLabels: {
         formatter: function(val, opt) {
           const goals =
@@ -492,7 +466,7 @@ const ChartCards = () => {
         showForSingleSeries: true,
         customLegendItems: ['Actual', 'Expected'],
         markers: {
-          fillColors: ['#00E396', '#775DD0']
+          fillColors: ['#343AC8', '#A3A6ED']
         }
       }
     },
