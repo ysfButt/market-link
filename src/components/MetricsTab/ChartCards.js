@@ -472,6 +472,114 @@ const ChartCards = () => {
     },
   };
 
+  var pieChart = {
+    series: [25, 15, 44, 55, 41, 17],
+    options: {
+      chart: {
+        width: '100%',
+        type: 'pie',
+      },
+      labels: ["Metis", "Harmony", "Moonbeam", "HECO", "Moonriver", "Optimism"],
+      plotOptions: {
+        pie: {
+          dataLabels: {
+            offset: -5
+          }
+        }
+      },
+      theme: {
+        mode: 'light', 
+        palette: 'palette1', 
+        monochrome: {
+          enabled: false,
+          color: '#255aee',
+          shadeTo: 'light',
+          shadeIntensity: 0.65
+        },
+      },
+      stroke: {
+        show: true,
+        curve: 'smooth',
+        lineCap: 'butt',
+        colors: undefined,
+        width: 1,
+        dashArray: 0,      
+      },
+      colors: '#343AC8',
+      fill: {
+        colors: ['#343AC8', "#A3A6ED", "#595ED5", "#FA989F", "#343AC8", "#7F5EB9"]
+      },
+      legend: {
+        show: true,
+        position: 'left',
+        markers: {
+          fillColors: ['#343AC8', "#A3A6ED", "#595ED5", "#FA989F", "#343AC8", "#7F5EB9"]
+        }
+      }
+    },
+  };
+
+  var radialBar = {
+    series: [76, 67, 61, 90],
+    options: {
+      chart: {
+        height: 290,
+        type: 'radialBar',
+      },
+      plotOptions: {
+        radialBar: {
+          offsetY: 0,
+          startAngle: 0,
+          endAngle: 270,
+          hollow: {
+            margin: 5,
+            size: '30%',
+            background: 'transparent',
+            image: undefined,
+          },
+          dataLabels: {
+            name: {
+              show: false,
+            },
+            value: {
+              show: false,
+            }
+          }
+        }
+      },
+      colors: ['#343AC8', "#A3A6ED", "#595ED5", "#FA989F", "#343AC8", "#7F5EB9"],
+      labels: ["Metis", "Harmony", "HECO", "Moonriver"],
+      legend: {
+        show: true,
+        floating: true,
+        fontSize: '16px',
+        position: 'left',
+        offsetX: 160,
+        offsetY: 15,
+        labels: {
+          useSeriesColors: true,
+        },
+        markers: {
+          size: 0
+        },
+        formatter: function(seriesName, opts) {
+          return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+        },
+        itemMargin: {
+          vertical: 3
+        }
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          legend: {
+              show: false
+          }
+        }
+      }]
+    },
+  };
+
   const cards = [
     {
       title: 'Responses',
@@ -508,6 +616,19 @@ const ChartCards = () => {
       chart: barchart2,
       chartType: 'bar',
     },
+    {
+      title: 'Responses',
+      subtitle: '4.24M',
+      chart: pieChart,
+      chartType: 'pie',
+    },
+    {
+      title: 'Responses',
+      subtitle: '4.24M',
+      chart: radialBar,
+      chartType: 'radialBar',
+      height: 315
+    },
   ];
 
   return (
@@ -521,7 +642,7 @@ const ChartCards = () => {
                 {item.subtitle && <strong className="subtitle">{item.subtitle}</strong>}
               </div>
               <div className="graph-h">
-                <Chart options={item.chart.options} series={item.chart.series} type={item.chartType} height="290" />
+                <Chart options={item.chart.options} series={item.chart.series} type={item.chartType} height={item.height ? item.height : 290} />
               </div>
             </div>
           </Grid>
